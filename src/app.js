@@ -31,17 +31,12 @@ app.get("/about", (req, res) => {
     createdBy: 'vidhya'
   });
 });
-app.get("/help", (req, res) => {
-  res.render("help", {
-    title: 'Help',
-    createdBy: 'vidhya'
-  });
-});
-app.get("/help/*", (req, res) => {
-  res.render("placeholder", {
-    title: 'Help article not found'
-  });
-});
+// for future reference
+// app.get("/help/*", (req, res) => {
+//   res.render("placeholder", {
+//     title: 'Help article not found'
+//   });
+// });
 
 app.get("/weather", (req, res) => {
   const query = req.query;

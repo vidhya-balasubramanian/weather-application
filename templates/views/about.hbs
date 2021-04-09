@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>About</title>
-  </head>
-  <body>
-    {{>header}}
-    <div>
-      <p style="text-align: center;" class="mt80">
-        This site was created by Vidhya. It uses data from mapbox.com and weatherstack.com!
-      </p>
+
+<head>
+  <title>About</title>
+</head>
+
+<body>
+  {{>header}}
+  <div class="mt80 about-body flex">
+    <img class="profile-pic " src="./assets/images/vidhya.jpeg" />
+    <div class=" ml30">
+      <p >Hello I am Vidhya. This site uses data from mapbox.com and weatherstack.com! </p>
+      <p>GitHub Link: <a href="https://github.com/vidhya-balasubramanian/weather-application"
+          target="_blank">https://github.com/vidhya-balasubramanian/weather-application</a></p>
+      <p>Get more about me <a href="https://www.linkedin.com/in/vidhya-b-692a241b2" target="_blank">here</a></p>
     </div>
-    {{>footer}}
-  </body>
+  </div>
+  {{>footer}}
+</body>
+
 </html>

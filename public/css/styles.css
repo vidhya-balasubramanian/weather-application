@@ -20,6 +20,9 @@ body {
   text-decoration: none;
   color: inherit;
 }
+.header-right-links > a:hover {
+  text-decoration: underline;
+}
 .footer {
   position: fixed;
   width: calc(100% - 120px);
@@ -28,6 +31,9 @@ body {
   padding: 0 60px;
   bottom: 0;
   background-color: #f8f9fa;
+  color: #616161;
+  font-size: 16px;
+  font-style: italic;
 }
 .text-align-right {
   text-align: right;
@@ -35,17 +41,20 @@ body {
 .search-btn {
   color: #fff;
   background-color: #007bff;
-  border-color: #007bff;
-  height: 30px;
+  border: none;
+  height: 34px;
   outline: none;
-  width: 76px;
+  width: 78px;
+  margin-left: 10px;
+
 }
 .location-input {
   width: 80%;
   height: 30px;
   padding: 0 14px;
+  font-size: 15px;
 }
-.weather-body {
+.weather-body, .about-body {
   width: 60%;
   display: block;
   margin: auto;
@@ -53,4 +62,22 @@ body {
 }
 .mt80 {
   margin-top: 80px;
+}
+.profile-pic {
+  width: 150px;
+}
+.mt0 {
+  margin-top: 0;
+}
+.flex {
+  display: flex;
+}
+.ml30 {
+  margin-left: 30px;
+}
+h1 {
+  font-size: 20px;
+}
+p {
+  font-size: 15px;
 }
