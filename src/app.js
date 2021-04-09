@@ -5,6 +5,8 @@ const hbs = require("hbs");
 const geocode = require('./helper').geocode;
 const forecast = require('./helper').forecast;
 
+const port = process.env.PORT || 4000;
+
 const app = express();
 const publicPath = path.join(__dirname, '../public');
 console.log('public '+ publicPath)
@@ -87,8 +89,8 @@ app.get("/static", (req, res) => {
   res.send(staticHtml);
 });
 
-app.listen(4000, () => {
-  console.log("Server is up in 4000 server");
+app.listen(port, () => {
+  console.log(`Server is up in ${port} server`);
 });
 
 
