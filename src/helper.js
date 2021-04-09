@@ -3,7 +3,6 @@ const request = require("postman-request");
 const geocode = (address, callback) => {
   const latLongUrl = `http://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(address)}.json?access_token=pk.eyJ1IjoidmlkaHlhMTcwNiIsImEiOiJja21xOWVzc2swb3BkMnZxcGNtcThud281In0.ihfDvqKi4NVuykIB6cHDrA&limit=1s`;
   request({ url: latLongUrl, json: true }, (error, response) => {
-    console.log;
     if (error) {
       callback("Unable to connect to mapbox.com!");
     } else if (response.statusCode === 404) {
@@ -25,7 +24,6 @@ const geocode = (address, callback) => {
 
 const forecast = (lat, lon, callback) => {
   const weatherAPIUrl = `http://api.weatherstack.com/current?access_key=7100f3bb1048078feb3550e5084c5a1e&query=${lat},${lon}&units=f`;
-  console.log(`weatherAPIUrl ${weatherAPIUrl}`)
   request({ url: weatherAPIUrl, json: true }, (error, response) => {
     if (error) {
       callback("Unable to connect to weather service!");

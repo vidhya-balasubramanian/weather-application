@@ -9,7 +9,6 @@ const port = process.env.PORT || 4000;
 
 const app = express();
 const publicPath = path.join(__dirname, '../public');
-console.log('public '+ publicPath)
 const viewsPath = path.join(__dirname, '../templates/views');
 const partialsPath = path.join(__dirname, '../templates/partials');
 
@@ -38,7 +37,6 @@ app.get("/help", (req, res) => {
     createdBy: 'vidhya'
   });
 });
-
 app.get("/help/*", (req, res) => {
   res.render("placeholder", {
     title: 'Help article not found'
@@ -53,7 +51,6 @@ app.get("/weather", (req, res) => {
     })
   }
   geocode(query.address, (geocodeError, {latitude, longitude, placeName} = {}) => {
-    console.log(`Error ${geocodeError}`);
     if (geocodeError) {
       return res.send({
         error: geocodeError

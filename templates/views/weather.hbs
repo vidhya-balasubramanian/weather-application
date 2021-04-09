@@ -5,13 +5,15 @@
   </head>
   <body>
     {{>header}}
-    <h1>{{title}}</h1>
-    <form>
-      <input placeholder="Location"/>
-      <button>Search</button>
-    </form>
+    <div class="weather-body">
+      <form>
+        <input placeholder="Location" class="location-input"/>
+        <button class="search-btn">Search</button>
+      </form>
+      <p id="ui_msg_1"></p>
+      <p id="ui_msg_2"></p>
+    </div>    
     {{>footer}}
-    
     <script src="/js/app.js"></script>
   </body>
 </html>
